@@ -1,0 +1,145 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #d4fc79, #96e6a1);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+#currentDateTime {
+  font-size: 1rem;
+  color: #222;
+  margin-top: 8px;
+}
+
+#planner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.time-block {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 5px 5px 15px #c1c1c1, -5px -5px 15px #ffffff;
+  padding: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.time-block:hover {
+  transform: scale(1.01);
+}
+
+.hour {
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.task {
+  flex: 1;
+  font-size: 1rem;
+  padding: 10px 12px;
+  margin: 0 10px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border 0.2s ease;
+}
+
+.task:focus {
+  border: 2px solid #007bff;
+  outline: none;
+  background: #f9f9f9;
+}
+
+.saveBtn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.saveBtn:hover {
+  background: #0056b3;
+}
+
+.saveBtn::after {
+  content: "Save Task";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.saveBtn:hover::after {
+  opacity: 1;
+}
+
+.past {
+  background-color: #f0f0f0;
+  color: #777;
+}
+
+.present {
+  background-color: #fff4c2;
+}
+
+.future {
+  background-color: #e6ffed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
